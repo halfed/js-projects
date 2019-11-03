@@ -5,6 +5,7 @@ function migratoryBirds(arr) {
     const resultObj = {};
 
     //LOOP THROUGH THE OBJECT AND GET HOW MANY TIMES EACH ONE EXISTS IN THE arr ARRAY
+    // THE ORDERING HELPS IN CASE WE HAVE A 2:3, 5:3, 1:2, 3:2 SCENARIO THEN 2:3 WOULD BE WHAT WE WANT
     arr.forEach(x=>{if(typeof(resultObj[x]) === 'undefined')  resultObj[x]=0; resultObj[x]++;});
 
     //WE NEED TO GET ALL COUNTS FOR EACH ITEM THAT APPEARS MORE THAN ONCE
